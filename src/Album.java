@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Album {
 	private String name;
@@ -34,7 +35,7 @@ public class Album {
 		return null;
 	}
 	
-	public boolean addSongToPlaylist(int trackNumberSong , ArrayList<Song>Playlist) {
+	public boolean addSongToPlaylist(int trackNumberSong , List<Song>Playlist) {
 		int index = trackNumberSong -1;
 		if(index > 0 && trackNumberSong <=  this.songs.size()-1) {
 			Playlist.add(this.songs.get(trackNumberSong));
@@ -45,7 +46,7 @@ public class Album {
 		}
 	}
 	
-	public boolean addSongToPlaylist(String nameSong, ArrayList<Song>Playlist) {
+	public boolean addSongToPlaylist(String nameSong, List<Song>Playlist) {
 		Song song = this.findSong(nameSong);
 		if(song!=null) {
 			Playlist.add(song);
